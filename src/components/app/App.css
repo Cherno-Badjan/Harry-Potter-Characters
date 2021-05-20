@@ -1,0 +1,38 @@
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  color: greenyellow;
+  text-align: center;
+  font-family: 'Girassol', cursive;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+html {
+  background: url('https://images8.alphacoders.com/110/thumb-1920-1102284.jpg')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+  color: greenyellow;
+  display: flex;
+  justify-content: center;
+}
