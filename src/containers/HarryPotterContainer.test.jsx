@@ -6,6 +6,7 @@ describe('HarryPotterContainer', () => {
   it('displays a list of Harry Potter characters', async () => {
     render(<HarryPotterContainer />);
 
-    screen.getByText('Loading...');
+    const ul = await screen.findByRole('list', { name: 'characters' });
+    expect(ul).not.toBeEmptyDOMElement();
   });
 });
