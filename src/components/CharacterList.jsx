@@ -3,7 +3,7 @@ import Character from './Character';
 import { useCharacters } from '../hooks/harryPotter';
 
 function CharacterList() {
-  const characters = useCharacters();
+  const { characters } = useCharacters();
 
   return (
     <ul aria-label="characters">

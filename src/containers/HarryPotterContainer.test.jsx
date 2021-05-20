@@ -1,5 +1,5 @@
 import React from 'react';
-import { screen, render } from '@testing-library/react';
+import { screen, render, waitFor } from '@testing-library/react';
 import HarryPotterContainer from './HarryPotterContainer';
 
 describe('HarryPotterContainer', () => {
@@ -7,6 +7,8 @@ describe('HarryPotterContainer', () => {
     render(<HarryPotterContainer />);
 
     const ul = await screen.findByRole('list', { name: 'characters' });
-    expect(ul).not.toBeEmptyDOMElement();
+    return waitFor(() => {
+      expect(ul).not.toBeEmptyDOMElement();
+    });
   });
 });

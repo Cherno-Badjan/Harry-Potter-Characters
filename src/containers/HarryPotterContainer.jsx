@@ -1,12 +1,13 @@
 import React from 'react';
 import CharacterList from '../components/CharacterList';
+import Spinner from '../components/Spinner';
 import { useCharacters } from '../hooks/harryPotter';
 
 function HarryPotterContainer() {
-  const { characters } = useCharacters();
+  const { characters, loading } = useCharacters();
   return (
     <div>
-      <CharacterList characters={characters} />
+      {loading ? <Spinner /> : <CharacterList characters={characters} />}
     </div>
   );
 }

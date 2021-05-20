@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './app/App.css';
 
 function Character({
   name,
@@ -12,7 +13,7 @@ function Character({
   patronus,
 }) {
   return (
-    <div>
+    <div className={styles.character}>
       <img src={image} alt={name} />
       <p>Name: {name}</p>
       <p>Species: {species}</p>
